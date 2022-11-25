@@ -1,0 +1,504 @@
+const left3 =document.getElementById('left3');
+const left3a =document.getElementById('left3a');
+const left3b =document.getElementById('left3b');
+const left3c =document.getElementById('left3c');
+const left3d =document.getElementById('left3d');
+const left3e =document.getElementById('left3e');
+const left3f =document.getElementById('left3f');
+const left3g =document.getElementById('left3g');
+const vw = window.innerWidth/100;
+const all=['a','b','c','d','e','f','g','h']
+var fall=false;
+
+left3.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+   document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (22.5*vw), y: (16.6*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('left').style.rotate = angle+'deg';
+    document.getElementById('left2').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2').style.transition= '0.5s';
+        document.getElementById('left').style.transition= '0.5s';
+        document.getElementById('left2').style.width='1vw';
+        document.getElementById('left').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2').style.transition= '0.04s';document.getElementById('left').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2').style.transition= '0.5s';
+        document.getElementById('left').style.transition= '0.5s';
+        document.getElementById('left2').style.width='1vw';
+        document.getElementById('left').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2').style.transition= '0.04s';document.getElementById('left').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+
+left3a.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+   document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (22.5*vw), y: (20.2*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('lefta').style.rotate = angle+'deg';
+    document.getElementById('left2a').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2a').style.transition= '0.5s';
+        document.getElementById('lefta').style.transition= '0.5s';
+        document.getElementById('left2a').style.width='1vw';
+        document.getElementById('lefta').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3a').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2a').style.transition= '0.04s';document.getElementById('lefta').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3a').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2a').style.transition= '0.5s';
+        document.getElementById('lefta').style.transition= '0.5s';
+        document.getElementById('left2a').style.width='1vw';
+        document.getElementById('lefta').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2a').style.transition= '0.04s';document.getElementById('lefta').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+left3b.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+   document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (22.5*vw), y: (23.7*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('leftb').style.rotate = angle+'deg';
+    document.getElementById('left2b').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2b').style.transition= '0.5s';
+        document.getElementById('leftb').style.transition= '0.5s';
+        document.getElementById('left2b').style.width='1vw';
+        document.getElementById('leftb').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3b').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2b').style.transition= '0.04s';document.getElementById('leftb').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3b').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2b').style.transition= '0.5s';
+        document.getElementById('leftb').style.transition= '0.5s';
+        document.getElementById('left2b').style.width='1vw';
+        document.getElementById('leftb').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2b').style.transition= '0.04s';document.getElementById('leftb').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+left3c.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+   document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (22.5*vw), y: (27.1*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('leftc').style.rotate = angle+'deg';
+    document.getElementById('left2c').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2c').style.transition= '0.5s';
+        document.getElementById('leftc').style.transition= '0.5s';
+        document.getElementById('left2c').style.width='1vw';
+        document.getElementById('leftc').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3c').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2c').style.transition= '0.04s';document.getElementById('leftc').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3c').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2c').style.transition= '0.5s';
+        document.getElementById('leftc').style.transition= '0.5s';
+        document.getElementById('left2c').style.width='1vw';
+        document.getElementById('leftc').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2c').style.transition= '0.04s';document.getElementById('leftc').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+left3d.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+   document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (22.5*vw), y: (30.7*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('leftd').style.rotate = angle+'deg';
+    document.getElementById('left2d').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2d').style.transition= '0.5s';
+        document.getElementById('leftd').style.transition= '0.5s';
+        document.getElementById('left2d').style.width='1vw';
+        document.getElementById('leftd').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3d').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2d').style.transition= '0.04s';document.getElementById('leftd').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3d').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2d').style.transition= '0.5s';
+        document.getElementById('leftd').style.transition= '0.5s';
+        document.getElementById('left2d').style.width='1vw';
+        document.getElementById('leftd').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2d').style.transition= '0.04s';document.getElementById('leftd').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+left3e.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+    document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (22.5*vw), y: (34.4*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('lefte').style.rotate = angle+'deg';
+    document.getElementById('left2e').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2e').style.transition= '0.5s';
+        document.getElementById('lefte').style.transition= '0.5s';
+        document.getElementById('left2e').style.width='1vw';
+        document.getElementById('lefte').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3e').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2e').style.transition= '0.04s';document.getElementById('lefte').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3a').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2e').style.transition= '0.5s';
+        document.getElementById('lefte').style.transition= '0.5s';
+        document.getElementById('left2e').style.width='1vw';
+        document.getElementById('lefte').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2e').style.transition= '0.04s';document.getElementById('lefte').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+left3f.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+    document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (24.5*vw), y: (38*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('leftf').style.rotate = angle+'deg';
+    document.getElementById('left2f').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2f').style.transition= '0.5s';
+        document.getElementById('leftf').style.transition= '0.5s';
+        document.getElementById('left2f').style.width='1vw';
+        document.getElementById('leftf').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3f').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2f').style.transition= '0.04s';document.getElementById('leftf').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3f').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2f').style.transition= '0.5s';
+        document.getElementById('leftf').style.transition= '0.5s';
+        document.getElementById('left2f').style.width='1vw';
+        document.getElementById('leftf').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2f').style.transition= '0.04s';document.getElementById('leftf').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+left3g.onmousedown=(e)=>{
+    console.log('pp')
+    document.body.style.cursor='grabbing'
+    document.body.onmousemove=(e)=>{
+    const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
+    const carPos = { x: (24.5*vw), y: (41.5*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('leftg').style.rotate = angle+'deg';
+    document.getElementById('left2g').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    for (let i = 0; i < all.length; i++) {
+    if (document.querySelector("right1"+all[i]+" > p:hover") != null) {
+        console.log("hovered");
+    }   
+    }
+}
+   document.body.onmouseup=(e)=>{
+    console.log('up')
+    for (let i = 0; i < all.length; i++) {
+        if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2g').style.transition= '0.5s';
+        document.getElementById('leftg').style.transition= '0.5s';
+        document.getElementById('left2g').style.width='1vw';
+        document.getElementById('leftg').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3g').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2g').style.transition= '0.04s';document.getElementById('leftg').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3g').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2g').style.transition= '0.5s';
+        document.getElementById('leftg').style.transition= '0.5s';
+        document.getElementById('left2g').style.width='1vw';
+        document.getElementById('leftg').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2g').style.transition= '0.04s';document.getElementById('leftg').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+
+/// mobile /////
+
+left3.ontouchstart=(e)=>{
+    console.log('pp')
+    var current;
+    document.body.style.cursor='grabbing'
+   document.body.ontouchmove=(e)=>{
+    current = document.elementFromPoint(event.touches[0].clientX,event.touches[0].clientY)
+    const mousePos = { x: parseInt(e.touches[0].clientX), y: parseInt(e.touches[0].clientY) }
+    const carPos = { x: (22.5*vw), y: (15*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('left').style.rotate = angle+'deg';
+    document.getElementById('left2').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+
+}
+   document.body.ontouchend=(event)=>{
+    for (let i = 0; i < all.length; i++) {
+        if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
+            $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
+            var img = document.createElement('img')
+            img.src="./IMG/delete.png";
+            $(img).addClass('delete')
+            $('#right'+all[i]).append(img)
+            img.onclick=()=>{
+                document.getElementById('left2').style.transition= '0.5s';
+        document.getElementById('left').style.transition= '0.5s';
+        document.getElementById('left2').style.width='1vw';
+        document.getElementById('left').style.rotate='0deg';
+        img.remove();
+        $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
+        document.getElementById('left3').style.display='block';
+        setTimeout(()=>{ document.getElementById('left2').style.transition= '0.04s';document.getElementById('left').style.transition= '0.04s';},500)
+            }
+            fall=true;
+            document.getElementById('left3').style.display='none';
+            setTimeout(()=>{fall=false},1000)
+        }  
+    }
+    if(fall==false){
+        document.getElementById('left2').style.transition= '0.5s';
+        document.getElementById('left').style.transition= '0.5s';
+        document.getElementById('left2').style.width='1vw';
+        document.getElementById('left').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('left2').style.transition= '0.04s';document.getElementById('left').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.ontouchmove=(e)=>{
+    }
+    document.body.ontouchend=(e)=>{
+    }
+   }
+}

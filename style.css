@@ -1,0 +1,102 @@
+*{
+    user-select: none;
+    transition: 0.04s;
+}
+body{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    align-items: center;
+  }
+  #leftspan{
+    position: absolute;
+    width: 20vw;
+    top: 10.5vw;
+    left: 8vw;
+  }
+  #rightspan{
+    position: absolute;
+    width: 42vw;
+    right: 2vw;
+    top: 10vw;
+  }
+  #container{
+    display: block;
+    width: 100vw;
+    height: 48vw;
+    background-color: white;
+    position: relative;
+  }
+#left,#lefta,#leftb,#leftc,#leftd,#lefte,#leftf,#leftg{
+    background-color: transparent;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    top: 16vw;
+    left: 22vw;
+    height:1.2vw;
+    position: absolute;
+    transform-origin: left;
+}
+
+#left1,#left1a,#left1b,#left1c,#left1d,#left1e,#left1f,#left1g{
+    display:block;
+    width:0.1vw;
+    height:0.1vw;
+    border-radius: 50%;
+    background-color: rgb(242, 206, 159);
+}
+#left2,#left2a,#left2b,#left2c,#left2d,#left2e,#left2f,#left2g{
+    display:block;
+    width:0vw;
+    height:0.1vw;
+    background-color: rgb(104, 101, 99);
+}
+#left3,#left3a,#left3b,#left3c,#left3c,#left3d,#left3e,#left3f,#left3g{
+    display:block;
+    width:1.2vw;
+    height:1.2vw;
+    margin-left: -0.3vw;
+    border-radius: 50%;
+    background-image: url(./IMG/btnOrange.png);
+    background-size: cover;
+}
+
+#right,#righta,#rightb,#rightc,#rightd,#righte,#rightf,#rightg,#righth{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 15vw;
+    right: 44vw;
+    width: 4vw;
+    height:2vw;
+}
+
+#right1,#right1a,#right1b,#right1c,#right1d,#right1e,#right1f,#right1g,#right1h{
+    display: block;
+    width: 1vw;
+    height: 1vw;
+    background-image: url(./IMG/rbutton.png);
+    background-size: cover;
+    border-radius: 50%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+#container{
+    background-image: url(./IMG/3649732.jpg);
+    background-size: 134vw;
+}
+.delete{
+    width: 1.5vw;
+}
+.drop{
+    padding-left: 0.1vw;
+    background: #fefcfd;
+    border-radius: 2vw;
+}
