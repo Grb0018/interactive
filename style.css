@@ -29,7 +29,7 @@ body{
   #container{
     display: block;
     width: 100vw;
-    height: 48vw;
+    height: 47vw;
     background-color: white;
     position: relative;
   }
@@ -53,15 +53,18 @@ body{
     background-color: rgb(242, 206, 159);
 }
 #left2,#left2a,#left2b,#left2c,#left2d,#left2e,#left2f,#left2g{
-    display:block;
-    width:0vw;
-    height:0.1vw;
-    background-color: rgb(104, 101, 99);
+    display: block;
+    width: 0vw;
+    height: 0.5vw;
+    background-color: #da8200;
+    border-bottom-left-radius: 2vw;
+    border-top-left-radius: 2vw;
+    filter: drop-shadow(2px 4px 6px grey);
 }
 #left3,#left3a,#left3b,#left3c,#left3c,#left3d,#left3e,#left3f,#left3g{
     display:block;
-    width:1.2vw;
-    height:1.2vw;
+    width:2vw;
+    height:2vw;
     margin-left: -0.3vw;
     border-radius: 50%;
     background-image: url(./IMG/btnOrange.png);
@@ -77,12 +80,13 @@ body{
     right: 44vw;
     width: 4vw;
     height:2vw;
+    
 }
 
 #right1,#right1a,#right1b,#right1c,#right1d,#right1e,#right1f,#right1g,#right1h{
     display: block;
-    width: 1vw;
-    height: 1vw;
+    width: 2vw;
+    height: 2vw;
     background-image: url(./IMG/rbutton.png);
     background-size: cover;
     border-radius: 50%;
