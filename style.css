@@ -14,8 +14,6 @@ body{
     overflow: hidden;
     height: 100vh;
     align-items: center;
-    overscroll-behavior-y: contain;
-
   }
   #leftspan{
     position: absolute;
@@ -66,7 +64,7 @@ body{
     background-color: #da8200;
     border-bottom-left-radius: 2vw;
     border-top-left-radius: 2vw;
-    filter: drop-shadow(2px 4px 6px grey);
+    box-shadow:2px 4px 6px grey;
 }
 #left3,#left3a,#left3b,#left3c,#left3c,#left3d,#left3e,#left3f,#left3g{
     display:block;
