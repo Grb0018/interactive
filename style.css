@@ -94,7 +94,7 @@ body{
     background-image: url(./IMG/rbutton.png);
     background-size: cover;
     border-radius: 50%;
-    filter: drop-shadow(2px 4px 6px black);
+    box-shadow: 3px 3px 10px black;
 }
 #container{
     background-image: url(./IMG/3649732.jpg);
