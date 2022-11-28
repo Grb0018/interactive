@@ -119,6 +119,7 @@ body{
     flex-direction: column;
     justify-content: center;
     backdrop-filter: blur(10px);
+    -webkit-filter: blur(10px);
 }
 #startScreen button{
     border: 0;
