@@ -7,8 +7,19 @@
     <script src="./index.js" defer></script>
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="startScreen">
+        <p style="    font-size: 1.3vw;">Bit Blits Digital Work Station</p>
+        <h2 style="font-family: 'Playfair Display', serif;">Interactive Lesson</h2>
+        <button id="Start">Click To Start</button>
+        <div id="demo">
+            <img src="./IMG/finger.png" alt="Indicator" srcset="./IMG/finger.png" id="finger" draggable="false">
+            <span id="fst"><text style="margin-right: 1vw;font-family: system-ui;">Question</text> <span id="leftLine"></span> <img src="./IMG/btnOrange.png" id="demoLeft1" style="width:3vw"></span>
+            <span id="sec"> <img src="./IMG/rbutton.png" id="demoRight1" style="width:3vw"><text style="margin-left: 1vw;font-family: system-ui;">Answer</text></span>
+        </div>
+    </div>
     <div id="container">
         <img src="./IMG/left col.png" id="leftspan">
         <img src="./IMG/right col.png" id="rightspan">
