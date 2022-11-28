@@ -1,6 +1,7 @@
 *{
     user-select: none;
     transition: 0.04s;
+    -webkit-user-drag:none;
 }
 body{
     display: flex;
