@@ -6,13 +6,14 @@ const left3d =document.getElementById('left3d');
 const left3e =document.getElementById('left3e');
 const left3f =document.getElementById('left3f');
 const left3g =document.getElementById('left3g');
+const leftDemo = document.getElementById('demoLeft1')
 const vw = window.innerWidth/100;
 const all=['a','b','c','d','e','f','g','h']
 var fall=false;
 
 left3.onmousedown=(e)=>{
     console.log('pp')
-    document.body.style.cursor='grabbing'
+    document.body.style.cursor='grabbing';
    document.body.onmousemove=(e)=>{
     const mousePos = { x: parseInt(e.clientX), y: parseInt(e.clientY) }
     const carPos = { x: (22.5*vw), y: (16.6*vw)-(7*vw)+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
@@ -885,3 +886,102 @@ left3g.ontouchstart=(e)=>{
     }
    }
 }
+
+leftDemo.ontouchstart=(e)=>{
+    document.getElementById('finger').style.display='none';
+    document.getElementById('finger').style.animation='none'
+    var current;
+    document.body.style.overflowY='hidden'
+    document.body.style.cursor='grabbing'
+    var l =getOffset(leftDemo).left;var t =getOffset(leftDemo).top
+   document.body.ontouchmove=(e)=>{
+    current = document.elementFromPoint(e.touches[0].clientX,e.touches[0].clientY)
+    const mousePos = { x: (e.touches[0].clientX), y: (e.touches[0].clientY) }
+    const carPos = { x: l, y: t}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('fst').style.rotate = angle+'deg';
+    document.getElementById('leftLine').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+
+}
+   document.body.ontouchend=(event)=>{
+    var rightDemo = document.getElementById('demoRight1')
+    document.body.style.overflowY='scroll'
+    for (let i = 0; i < all.length; i++) {
+        if( current ==rightDemo && $(rightDemo).css('background-image').includes('btnDone')==false){
+            rightDemo.src="./IMG/btnDone.png";
+            $(rightDemo).css({width:'3.5vw',height:'3.5vw'});
+            leftDemo.style.display='none';
+            fall=true;
+            setTimeout(()=>{fall=false},1000)
+            setTimeout(()=>{$("#startScreen").fadeOut()},3000)
+            $('#startScreen')[0].querySelector('h2').innerText =" Great !!  Let's do exercise"
+        }  
+    }
+    if(fall==false){
+        document.getElementById('leftLine').style.transition= '0.5s';
+        document.getElementById('fst').style.transition= '0.5s';
+        document.getElementById('leftLine').style.width='1vw';
+        document.getElementById('fst').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('leftLine').style.transition= '0.04s';document.getElementById('fst').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.ontouchmove=(e)=>{
+    }
+    document.body.ontouchend=(e)=>{
+    }
+   }
+}
+leftDemo.onmousedown=(e)=>{
+    document.getElementById('finger').style.display='none';
+    document.getElementById('finger').style.animation='none'
+    var current;
+    document.body.style.overflowY='hidden'
+    document.body.style.cursor='grabbing'
+    var l =getOffset(leftDemo).left;var t =getOffset(leftDemo).top
+   document.body.onmousemove=(e)=>{
+    current = document.elementFromPoint(e.clientX,e.clientY)
+    const mousePos = { x: (e.clientX), y: (e.clientY) }
+    const carPos = { x: l, y: t}
+    const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
+    const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
+    document.getElementById('fst').style.rotate = angle+'deg';
+    document.getElementById('leftLine').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
+    }
+   document.body.onmouseup=(e)=>{
+    console.log('up');
+    document.body.style.cursor='auto'
+    var rightDemo = document.getElementById('demoRight1')
+    document.body.style.overflowY='scroll'
+        if( current ==rightDemo && $(rightDemo).css('background-image').includes('btnDone')==false){
+            rightDemo.src="./IMG/btnDone.png";
+            $(rightDemo).css({width:'3.5vw',height:'3.5vw'});
+            leftDemo.style.display='none';
+            fall=true;
+            $('#startScreen')[0].querySelector('h2').innerText =" Great !!  Let's do exercise"
+            setTimeout(()=>{fall=false},1000)
+            setTimeout(()=>{$("#startScreen").fadeOut()},3000)
+        }  
+    if(fall==false){
+        document.getElementById('leftLine').style.transition= '0.5s';
+        document.getElementById('fst').style.transition= '0.5s';
+        document.getElementById('leftLine').style.width='1vw';
+        document.getElementById('fst').style.rotate='0deg';
+        setTimeout(()=>{ document.getElementById('leftLine').style.transition= '0.04s';document.getElementById('fst').style.transition= '0.04s';},500)
+    }
+    document.body.style.cursor='auto'
+    document.body.onmousemove=(e)=>{
+    }
+    document.body.onmouseup=(e)=>{
+    }
+   }
+}
+
+
+document.getElementById('Start').onclick=()=>{
+    $('#demo').css('display','flex')
+    $('#startScreen')[0].querySelector('h2').style.margin='0'
+    $('#Start').fadeOut()
+    setTimeout(()=>{document.getElementById('finger').style.animation='move 3s linear infinite'},800)
+}
+
