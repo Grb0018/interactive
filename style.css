@@ -35,7 +35,7 @@ body{
     height: 45vw;
     background-color: white;
     position: relative;
-    
+    overflow-y:hidden;
   }
 #left,#lefta,#leftb,#leftc,#leftd,#lefte,#leftf,#leftg{
     background-color: transparent;
