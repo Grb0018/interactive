@@ -19,19 +19,22 @@ body{
     width: 20vw;
     top: 10.5vw;
     left: 8vw;
+    margin-top:-7vw;
   }
   #rightspan{
     position: absolute;
     width: 42vw;
     right: 2vw;
     top: 10vw;
+    margin-top:-7vw;
   }
   #container{
     display: block;
     width: 100vw;
-    height: 47vw;
+    height: 45vw;
     background-color: white;
     position: relative;
+    
   }
 #left,#lefta,#leftb,#leftc,#leftd,#lefte,#leftf,#leftg{
     background-color: transparent;
@@ -43,6 +46,7 @@ body{
     height:1.2vw;
     position: absolute;
     transform-origin: left;
+    margin-top:-7vw;
 }
 
 #left1,#left1a,#left1b,#left1c,#left1d,#left1e,#left1f,#left1g{
@@ -80,7 +84,7 @@ body{
     right: 44vw;
     width: 4vw;
     height:2vw;
-    
+    margin-top:-7vw;
 }
 
 #right1,#right1a,#right1b,#right1c,#right1d,#right1e,#right1f,#right1g,#right1h{
