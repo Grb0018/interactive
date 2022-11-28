@@ -1,7 +1,6 @@
 *{
     user-select: none;
     transition: 0.04s;
-    -webkit-user-drag: none;
 }
 body{
     display: flex;
@@ -95,7 +94,7 @@ body{
     background-image: url(./IMG/rbutton.png);
     background-size: cover;
     border-radius: 50%;
-    filter: drop-shadow(2px 4px 6px black);
+    box-shadow:2px 4px 6px black;
 }
 #container{
     background-image: url(./IMG/3649732.jpg);
