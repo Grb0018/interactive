@@ -1,6 +1,7 @@
 *{
     user-select: none;
     transition: 0.04s;
+    -webkit-user-drag: none;
 }
 body{
     display: flex;
@@ -56,7 +57,7 @@ body{
     border-radius: 50%;
     background-color: rgb(242, 206, 159);
 }
-#left2,#left2a,#left2b,#left2c,#left2d,#left2e,#left2f,#left2g{
+#left2,#left2a,#left2b,#left2c,#left2d,#left2e,#left2f,#left2g,#leftLine{
     display: block;
     width: 0vw;
     height: 0.5vw;
@@ -94,7 +95,7 @@ body{
     background-image: url(./IMG/rbutton.png);
     background-size: cover;
     border-radius: 50%;
-    box-shadow: 3px 3px 10px black;
+    filter: drop-shadow(2px 4px 6px black);
 }
 #container{
     background-image: url(./IMG/3649732.jpg);
@@ -107,4 +108,61 @@ body{
     padding-left: 0.1vw;
     background: #fefcfd;
     border-radius: 2vw;
+}
+#startScreen{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+#startScreen button{
+    border: 0;
+    box-shadow: 0px 0px 20px lightgrey;
+    height: 3vw;
+    width: 12vw;
+    }
+#startScreen h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 3vw;
+    margin-bottom: 4vw;
+}    
+#demo{
+    display: none;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+#fst, #sec{
+    display: flex;
+    align-items: center;
+}
+#demoLeft1{box-shadow: 2px 4px 10px;border-radius: 50%;}
+#finger{
+    width: 4vw;
+    position: absolute;
+    left: 25vw;
+    filter: drop-shadow(2px 0px 6px black) invert(1);
+    margin-top: 3vw;
+    
+}
+#fst{
+    transform-origin: left;
+    position: absolute;
+}
+#sec{
+    right: 18vw;
+    position: absolute;
+}
+@keyframes move{
+    20%{
+        transform: translateX(1vw);
+    }
+    90%{
+        transform: translateX(51vw);
+    }
 }
