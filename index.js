@@ -1054,8 +1054,9 @@ function endChk(){
         if(ans[0][$('#righth').attr('no')]==parseInt($('#righth').attr('put'))){score+=1}
         document.getElementById('getscore').innerText=score
         $('#endScreen').css('display','flex')
-    }
-}
-document.getElementById('replay').onclick=()=>{
+        document.getElementById('replay').onclick=()=>{
     location.reload()
 }
+    }
+}
+
