@@ -462,11 +462,11 @@ function getOffset(el) {
 left3.ontouchstart=(e)=>{
    var current;
     document.body.style.cursor='grabbing'
+    var l =getOffset(left3).left;var t =getOffset(left3).top
    document.body.ontouchmove=(e)=>{
-    
     current = document.elementFromPoint(e.touches[0].pageX - window.scrollX,e.touches[0].pageY - window.scrollY)
     const mousePos = { x: parseInt(e.touches[0].pageX - window.scrollX), y: parseInt(e.touches[0].pageY - window.scrollY) }
-    const carPos = { x: (22.5*vw), y: (20.2*vw)-(7*vw)+window.scrollY+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const carPos = { x: l, y: t}
     const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('left').style.rotate = angle+'deg';
@@ -515,11 +515,12 @@ left3a.ontouchstart=(e)=>{
     console.log('pp')
     var current;
     document.body.style.cursor='grabbing'
+    var l =getOffset(left3a).left;var t =getOffset(left3a).top
    document.body.ontouchmove=(e)=>{
     
     current = document.elementFromPoint(e.touches[0].pageX - window.scrollX,e.touches[0].pageY - window.scrollY)
     const mousePos = { x: parseInt(e.touches[0].pageX - window.scrollX), y: parseInt(e.touches[0].pageY - window.scrollY) }
-    const carPos = { x: (22.5*vw), y: (23.7*vw)-(7*vw)+window.scrollY+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const carPos = { x: l, y: t}
     const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('lefta').style.rotate = angle+'deg';
@@ -569,11 +570,11 @@ left3b.ontouchstart=(e)=>{
     console.log('pp')
     var current;
     document.body.style.cursor='grabbing'
+    var l =getOffset(left3b).left;var t =getOffset(leftb).top
    document.body.ontouchmove=(e)=>{
-    
     current = document.elementFromPoint(e.touches[0].pageX - window.scrollX,e.touches[0].pageY - window.scrollY)
     const mousePos = { x: parseInt(e.touches[0].pageX - window.scrollX), y: parseInt(e.touches[0].pageY - window.scrollY) }
-    const carPos = { x: (22.5*vw), y: (27.1*vw)-(7*vw)+window.scrollY+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const carPos = { x: l, y:t}
     const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('leftb').style.rotate = angle+'deg';
@@ -623,11 +624,12 @@ left3c.ontouchstart=(e)=>{
     console.log('pp')
     var current;
     document.body.style.cursor='grabbing'
+    var l =getOffset(left3c).left;var t =getOffset(left3c).top
    document.body.ontouchmove=(e)=>{
     
     current = document.elementFromPoint(e.touches[0].pageX - window.scrollX,e.touches[0].pageY - window.scrollY)
     const mousePos = { x: parseInt(e.touches[0].pageX - window.scrollX), y: parseInt(e.touches[0].pageY - window.scrollY) }
-    const carPos = { x: (22.5*vw), y: (30.7*vw)-(7*vw)+window.scrollY+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const carPos = { x: l, y: t}
     const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('leftc').style.rotate = angle+'deg';
@@ -675,12 +677,13 @@ left3c.ontouchstart=(e)=>{
 left3d.ontouchstart=(e)=>{
     console.log('pp')
     var current;
-    document.body.style.cursor='grabbing'
+    document.body.style.cursor='grabbing';
+    var l =getOffset(left3d).left;var t =getOffset(left3d).top
    document.body.ontouchmove=(e)=>{
     
     current = document.elementFromPoint(e.touches[0].pageX - window.scrollX,e.touches[0].pageY - window.scrollY)
     const mousePos = { x: parseInt(e.touches[0].pageX - window.scrollX), y: parseInt(e.touches[0].pageY - window.scrollY) }
-    const carPos = { x: (22.5*vw), y: (34.4*vw)-(7*vw)+window.scrollY+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const carPos = { x: l, y: t}
     const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('leftd').style.rotate = angle+'deg';
@@ -730,11 +733,12 @@ left3e.ontouchstart=(e)=>{
     console.log('pp')
     var current;
     document.body.style.cursor='grabbing'
+    var l =getOffset(left3e).left;var t =getOffset(left3e).top
    document.body.ontouchmove=(e)=>{
     
     current = document.elementFromPoint(e.touches[0].pageX - window.scrollX,e.touches[0].pageY - window.scrollY)
     const mousePos = { x: parseInt(e.touches[0].pageX - window.scrollX), y: parseInt(e.touches[0].pageY - window.scrollY) }
-    const carPos = { x: (24.5*vw), y: (38*vw)-(7*vw)+window.scrollY+((window.innerHeight -parseInt($('#container').css('height'))) / 2)}
+    const carPos = { x: l, y: t}
     const vector = { x: mousePos.x - carPos.x, y: mousePos.y - carPos.y }
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('lefte').style.rotate = angle+'deg';
