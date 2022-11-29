@@ -13,9 +13,9 @@ var fall=false;
 window.onload=()=>{
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
-    $('#left3').css('width','2.7vw'),$('#left3a').css('width','2.7vw');$('#left3b').css('width','2.7vw');$('#left3c').css('width','2.7vw');$('#left3c').css('width','2.7vw');$('#left3d').css('width','2.7vw');$('#left3e').css('width','2.7vw');$('#left3f').css('width','2.7vw');$('#left3g').css('width','2.7vw');
-    $('#left3').css('height','2.7vw'),$('#left3a').css('height','2.7vw');$('#left3b').css('height','2.7vw');$('#left3c').css('height','2.7vw');$('#left3c').css('height','2.7vw');$('#left3d').css('height','2.7vw');$('#left3e').css('height','2.7vw');$('#left3f').css('height','2.7vw');$('#left3g').css('height','2.7vw');
-}   
+    $('#left3').css('width','2.5vw'),$('#left3a').css('width','2.5vw');$('#left3b').css('width','2.5vw');$('#left3c').css('width','2.5vw');$('#left3c').css('width','2.5vw');$('#left3d').css('width','2.5vw');$('#left3e').css('width','2.5vw');$('#left3f').css('width','2.5vw');$('#left3g').css('width','2.5vw');
+    $('#left3').css('height','2.5vw'),$('#left3a').css('height','2.5vw');$('#left3b').css('height','2.5vw');$('#left3c').css('height','2.5vw');$('#left3c').css('height','2.5vw');$('#left3d').css('height','2.5vw');$('#left3e').css('height','2.5vw');$('#left3f').css('height','2.5vw');$('#left3g').css('height','2.5vw');
+}  
 }
 window.onresize=()=>{
     location.reload()
