@@ -716,7 +716,7 @@ left3d.ontouchstart=(e)=>{
         img.remove();
         $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
         document.getElementById('left3d').style.display='block';
-        setTimeout(()=>{ document.getElementById('left2').style.transition= '0.04s';document.getElementById('left').style.transition= '0.04s';},500)
+        setTimeout(()=>{ document.getElementById('left2d').style.transition= '0.04s';document.getElementById('leftd').style.transition= '0.04s';},500)
             }
             fall=true;
             document.getElementById('left3d').style.display='none';
