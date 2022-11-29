@@ -1,7 +1,7 @@
 *{
     user-select: none;
     transition: 0.04s;
-    -webkit-user-drag:none;
+    -webkit-user-drag: none;
 }
 body{
     display: flex;
@@ -35,7 +35,7 @@ body{
     height: 45vw;
     background-color: white;
     position: relative;
-    overflow-y:hidden;
+    
   }
 #left,#lefta,#leftb,#leftc,#leftd,#lefte,#leftf,#leftg{
     background-color: transparent;
@@ -100,7 +100,6 @@ body{
 #container{
     background-image: url(./IMG/3649732.jpg);
     background-size: 134vw;
-    overflow:hidden;
 }
 .delete{
     width: 1.5vw;
@@ -120,7 +119,7 @@ body{
     flex-direction: column;
     justify-content: center;
     backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 #startScreen button{
     border: 0;
