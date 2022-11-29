@@ -15,6 +15,9 @@ window.onload=()=>{
 if (isMobile) {
     $('#left3').css('width','3vw'),$('#left3a').css('width','3vw');$('#left3b').css('width','3vw');$('#left3c').css('width','3vw');$('#left3c').css('width','3vw');$('#left3d').css('width','3vw');$('#left3e').css('width','3vw');$('#left3f').css('width','3vw');$('#left3g').css('width','3vw');}
 }
+window.onresize=()=>{
+    location.reload()
+}
 left3.onmousedown=(e)=>{
     console.log('pp')
     document.body.style.cursor='grabbing';
