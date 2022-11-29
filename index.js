@@ -848,7 +848,6 @@ left3g.ontouchstart=(e)=>{
 
 }
    document.body.ontouchend=(event)=>{
-    document.body.style.overflowY='scroll'
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
@@ -906,7 +905,6 @@ leftDemo.ontouchstart=(e)=>{
 }
    document.body.ontouchend=(event)=>{
     var rightDemo = document.getElementById('demoRight1')
-    document.body.style.overflowY='scroll'
     for (let i = 0; i < all.length; i++) {
         if( current ==rightDemo && $(rightDemo).css('background-image').includes('btnDone')==false){
             rightDemo.src="./IMG/btnDone.png";
@@ -952,7 +950,6 @@ leftDemo.onmousedown=(e)=>{
     console.log('up');
     document.body.style.cursor='auto'
     var rightDemo = document.getElementById('demoRight1')
-    document.body.style.overflowY='scroll'
         if( current ==rightDemo && $(rightDemo).css('background-image').includes('btnDone')==false){
             rightDemo.src="./IMG/btnDone.png";
             $(rightDemo).css({width:'3.5vw',height:'3.5vw'});
