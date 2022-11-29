@@ -111,7 +111,7 @@ body{
     background: #fefcfd;
     border-radius: 2vw;
 }
-#startScreen{
+#startScreen,#endScreen{
     position: absolute;
     z-index: 5;
     width: 100%;
@@ -168,4 +168,44 @@ body{
     90%{
         transform: translateX(51vw);
     }
+}
+#score{
+    padding: 0.9vw;
+    background: #efefef;
+    width: 10vw;
+    height: 10vw;
+    font-size: 2.7vw;
+    border-radius: 12vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Playfair Display';
+    border: 2px solid #f81d1d;
+    color: blue;
+    margin-bottom: 2.5vw;
+    box-shadow: 0px 2px 4px lightgrey;
+}
+#score hr{
+    width: 8vw;
+    margin-top: 1.7vw;
+    border-width: thin;
+    border-style: solid;
+    border-block-color: grey;
+}
+#replay{
+    border: 0;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    color: #297476;
+    box-shadow: 0px 2px 4px;
+}
+#endScreen h3{
+    font-family: 'Playfair Display';
+    color: #588d8e;
+    margin-left: -32vw;
+}
+#endScreen{
+    display:none;
 }
