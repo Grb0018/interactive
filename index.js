@@ -10,7 +10,11 @@ const leftDemo = document.getElementById('demoLeft1')
 const vw = window.innerWidth/100;
 const all=['a','b','c','d','e','f','g','h']
 var fall=false;
-
+window.onload=()=>{
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+    $('#left3').css('width','3vw'),$('#left3a').css('width','3vw');$('#left3b').css('width','3vw');$('#left3c').css('width','3vw');$('#left3c').css('width','3vw');$('#left3d').css('width','3vw');$('#left3e').css('width','3vw');$('#left3f').css('width','3vw');$('#left3g').css('width','3vw');}
+}
 left3.onmousedown=(e)=>{
     console.log('pp')
     document.body.style.cursor='grabbing';
