@@ -10,6 +10,7 @@ const leftDemo = document.getElementById('demoLeft1')
 const vw = window.innerWidth/100;
 const all=['a','b','c','d','e','f','g','h']
 var fall=false;
+
 window.onload=()=>{
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
@@ -30,18 +31,19 @@ left3.onmousedown=(e)=>{
     const angle = Math.atan2(vector.y, vector.x) * 180 / Math.PI;
     document.getElementById('left').style.rotate = angle+'deg';
     document.getElementById('left2').style.width= Math.sqrt(((mousePos.x - carPos.x)*(mousePos.x - carPos.x))+((mousePos.y - carPos.y)*(mousePos.y - carPos.y)))+ 'px';
-
 }
    document.body.onmouseup=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#left').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2').style.transition= '0.5s';
         document.getElementById('left').style.transition= '0.5s';
@@ -50,6 +52,7 @@ left3.onmousedown=(e)=>{
         img.remove();
         $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
         document.getElementById('left3').style.display='block';
+
         setTimeout(()=>{ document.getElementById('left2').style.transition= '0.04s';document.getElementById('left').style.transition= '0.04s';},500)
             }
             fall=true;
@@ -92,12 +95,14 @@ left3a.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#lefta').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2a').style.transition= '0.5s';
         document.getElementById('lefta').style.transition= '0.5s';
@@ -147,12 +152,14 @@ left3b.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftb').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2b').style.transition= '0.5s';
         document.getElementById('leftb').style.transition= '0.5s';
@@ -161,6 +168,7 @@ left3b.onmousedown=(e)=>{
         img.remove();
         $('#right1'+all[i]).css('background-image','url(./IMG/rbutton.png)');
         document.getElementById('left3b').style.display='block';
+       
         setTimeout(()=>{ document.getElementById('left2b').style.transition= '0.04s';document.getElementById('leftb').style.transition= '0.04s';},500)
             }
             fall=true;
@@ -202,12 +210,14 @@ left3c.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftc').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2c').style.transition= '0.5s';
         document.getElementById('leftc').style.transition= '0.5s';
@@ -257,12 +267,14 @@ left3d.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftd').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2d').style.transition= '0.5s';
         document.getElementById('leftd').style.transition= '0.5s';
@@ -312,12 +324,14 @@ left3e.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#lefte').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2e').style.transition= '0.5s';
         document.getElementById('lefte').style.transition= '0.5s';
@@ -367,12 +381,14 @@ left3f.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftf').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2f').style.transition= '0.5s';
         document.getElementById('leftf').style.transition= '0.5s';
@@ -422,12 +438,14 @@ left3g.onmousedown=(e)=>{
     console.log('up')
     for (let i = 0; i < all.length; i++) {
         if($('#right1'+all[i]+':hover').length !== 0 && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftg').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2g').style.transition= '0.5s';
         document.getElementById('leftg').style.transition= '0.5s';
@@ -485,12 +503,14 @@ left3.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#left').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2').style.transition= '0.5s';
         document.getElementById('left').style.transition= '0.5s';
@@ -539,12 +559,14 @@ left3a.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#lefta').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2a').style.transition= '0.5s';
         document.getElementById('lefta').style.transition= '0.5s';
@@ -593,12 +615,14 @@ left3b.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftb').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2b').style.transition= '0.5s';
         document.getElementById('leftb').style.transition= '0.5s';
@@ -648,12 +672,14 @@ left3c.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftc').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2c').style.transition= '0.5s';
         document.getElementById('leftc').style.transition= '0.5s';
@@ -702,12 +728,14 @@ left3d.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#leftd').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2d').style.transition= '0.5s';
         document.getElementById('leftd').style.transition= '0.5s';
@@ -757,12 +785,14 @@ left3e.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#lefte').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2e').style.transition= '0.5s';
         document.getElementById('lefte').style.transition= '0.5s';
@@ -811,12 +841,14 @@ left3f.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#lefte').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2f').style.transition= '0.5s';
         document.getElementById('leftf').style.transition= '0.5s';
@@ -865,12 +897,14 @@ left3g.ontouchstart=(e)=>{
    document.body.ontouchend=(event)=>{
     for (let i = 0; i < all.length; i++) {
         if( current ==$('#right1'+all[i])[0] && $('#right1'+all[i]).css('background-image').includes('btnDone')==false){
+            $('#right'+all[i]).attr('put',$('#lefte').attr('no'))
             $('#right1'+all[i]).css('background-image','url("./IMG/btnDone.png');
             $('#right1'+all[i]).css({width:'2vw',height:'2vw'});
             var img = document.createElement('img')
             img.src="./IMG/delete.png";
             $(img).addClass('delete')
             $('#right'+all[i]).append(img)
+           setTimeout(()=>{endChk()},1000)
             img.onclick=()=>{
                 document.getElementById('left2g').style.transition= '0.5s';
         document.getElementById('leftg').style.transition= '0.5s';
@@ -997,3 +1031,31 @@ document.getElementById('Start').onclick=()=>{
     setTimeout(()=>{document.getElementById('finger').style.animation='move 3s linear infinite'},800)
 }
 
+function endChk(){
+  const ans =  [{'c':8,'e':7,'g':6,'b':5,'h':4,'d':3,'f':2,'a':1}]
+    var end=0;
+    if($('#right1a').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1b').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1c').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1d').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1e').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1f').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1g').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if($('#right1h').css('background-image').includes('btnDone')==false){end=0}else{end+=1}
+    if(end==8){
+        var score=0;
+        if(ans[0][$('#righta').attr('no')]==parseInt($('#righta').attr('put'))){score+=1}
+        if(ans[0][$('#rightb').attr('no')]==parseInt($('#rightb').attr('put'))){score+=1}
+        if(ans[0][$('#rightc').attr('no')]==parseInt($('#rightc').attr('put'))){score+=1}
+        if(ans[0][$('#rightd').attr('no')]==parseInt($('#rightd').attr('put'))){score+=1}
+        if(ans[0][$('#righte').attr('no')]==parseInt($('#righte').attr('put'))){score+=1}
+        if(ans[0][$('#rightf').attr('no')]==parseInt($('#rightf').attr('put'))){score+=1}
+        if(ans[0][$('#rightg').attr('no')]==parseInt($('#rightg').attr('put'))){score+=1}
+        if(ans[0][$('#righth').attr('no')]==parseInt($('#righth').attr('put'))){score+=1}
+        document.getElementById('getscore').innerText=score
+        $('#endScreen').css('display','flex')
+    }
+}
+document.getElementById('replay').onclick=()=>{
+    location.reload()
+}
